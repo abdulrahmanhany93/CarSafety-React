@@ -1,17 +1,12 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import sl from "../../../../Injection_Container";
-import { LoginActionParams } from "../../../config/UseCases/UseCaseParams";
-import { isLeft } from "fp-ts/lib/Either";
-import Servicetypes from "../../../core/utils/SlTypes";
+import { createSlice } from "@reduxjs/toolkit";
+
 import { FirebaseAuthTypes, firebase } from "@react-native-firebase/auth";
 import { Failure } from "../../../core/error/failures";
-import AuthMethods from "./AuthActionsMethod";
-import { Toast } from "react-native-toast-message/lib/src/Toast";
-import { BaseToast } from "react-native-toast-message";
-import Colors from "../../../core/utils/colors";
+
 import { showSnackBar } from "../../../core/utils/globalMethods";
 import { SnackbarType } from "../../../core/utils/AppEnums";
 import { getCurrentUser } from "../../../core/utils/globalMethods";
+import { login } from "./AuthThunks";
 
 const initialState = {
   user: getCurrentUser() ?? ({} as FirebaseAuthTypes.User),
@@ -20,18 +15,6 @@ const initialState = {
   error: {} as Failure,
 };
 
-export const login = createAsyncThunk(
-  "auth/login",
-  async (params: LoginActionParams, { rejectWithValue }) => {
-    const methods = sl.get<AuthMethods>(Servicetypes.AuthMethods);
-    var result = await methods.getLoginUseCases({ params });
-
-    if (isLeft(result)) {
-      return rejectWithValue(result.left.toJSON());
-    }
-    return result.right.toJSON();
-  }
-);
 const authSlice = createSlice({
   name: "Auth",
   initialState: initialState,

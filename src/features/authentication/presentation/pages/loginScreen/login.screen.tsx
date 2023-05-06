@@ -9,7 +9,6 @@ import ImageButton from "../../../../../core/components/imageButton/imageButton"
 import Assets from "../../../../../core/utils/assets.manager";
 import authScreenStyles from "../styles";
 import { routes } from "../../../../../config/router/routes";
-import { login } from "../../../../../Logic/Slices/Auth/AuthSlice";
 import { LoginActionParams } from "../../../../../config/UseCases/UseCaseParams";
 import {
   useAppDispatch,
@@ -18,6 +17,7 @@ import {
 
 import { AuthActionType } from "../../../../../core/utils/AppEnums";
 import { Toast } from "react-native-toast-message/lib/src/Toast";
+import { login } from "../../../../../Logic/Slices/Auth/AuthThunks";
 
 export default function LoginScreen() {
   const navigator = useNavigation();

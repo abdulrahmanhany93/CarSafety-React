@@ -5,7 +5,6 @@ import Brand from "../../../domain/entities/brand";
 import BrandContainer from "./brand.container";
 import { useNavigation } from "@react-navigation/native";
 import { routes } from "../../../../../config/router/routes";
-import { carsGenerator } from "../../../../../core/utils/constants";
 import {
   useAppDispatch,
   useAppSelector,

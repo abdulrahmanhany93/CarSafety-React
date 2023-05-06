@@ -5,8 +5,6 @@ import { View, Dimensions, StyleSheet } from "react-native";
 
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { carsGenerator } from "../../../../../core/utils/constants";
-
 import { FlatList, ScrollView } from "react-native-gesture-handler";
 import BackArrow from "../../../../../core/components/backArrow/back.arrow";
 import Brand from "../../../../home/domain/entities/brand";
@@ -19,8 +17,8 @@ import {
   useAppSelector,
 } from "../../../../../Logic/Slices/hooks";
 import React from "react";
-import { getSections } from "../../../../../Logic/Slices/Brand/BrandSlice";
 import LoadingView from "../../../../../core/components/loadingComponent/loadingView";
+import { getSections } from "../../../../../Logic/Slices/Brand/BrandThunks";
 
 const { width, fontScale } = Dimensions.get("window");
 
@@ -49,7 +47,6 @@ export default function BrandScreen() {
             <Divider style={styles.divider} />
             <FlatList
               data={item.cars}
-             
               keyExtractor={(item) => item.name}
               scrollEnabled={false}
               numColumns={2}
