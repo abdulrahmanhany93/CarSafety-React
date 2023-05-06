@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "761182910749",
+    "project_id": "mycarsafety-564fe",
+    "storage_bucket": "mycarsafety-564fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761182910749:android:c19a89ad1594fe681109f4",
+        "android_client_info": {
+          "package_name": "com.myCarSafety"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761182910749-5r6fomoe9ferd719njvfv34lki7auigv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myCarSafety",
+            "certificate_hash": "da22192bb6bf5ca6c0ec24cbe7e22acc46c8263c"
+          }
+        },
+        {
+          "client_id": "761182910749-d6dpefntp8lpk6chm6u0on8gspi5o1cu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myCarSafety",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "761182910749-3kta6bv24pvpe29k0md1g33tspvh28ev.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj8sXRJP3J7-cCcvVZ3Ms0lAtMnplME5U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "761182910749-3kta6bv24pvpe29k0md1g33tspvh28ev.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "761182910749-ftrlarvtn3cvs540s6olqu5bd8vhmeif.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.myCarSafety",
+                "app_store_id": "6446961209"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

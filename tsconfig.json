@@ -1,6 +1,15 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "target": "es5",
+    "jsx": "preserve",
+
+    "lib": ["es6"],
+    "types": ["reflect-metadata"],
+    "module": "Node16",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   }
 }
