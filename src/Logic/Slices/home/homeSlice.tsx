@@ -4,7 +4,7 @@ import {
   isRejectedWithValue,
 } from "@reduxjs/toolkit";
 import sl from "../../../../Injection_Container";
-import Servicetypes from "../../../core/utils/SlTypes";
+import ServiceTypes from "../../../core/utils/SlTypes";
 import { NoParams } from "../../../config/UseCases/UseCaseParams";
 import { isLeft } from "fp-ts/lib/Either";
 import Brand from "../../../features/home/domain/entities/brand";

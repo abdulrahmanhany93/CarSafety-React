@@ -1,14 +1,10 @@
 import React from "react";
 import { FlatList } from "react-native";
 import Brand from "../../../domain/entities/brand";
-
 import BrandContainer from "./brand.container";
 import { useNavigation } from "@react-navigation/native";
 import { routes } from "../../../../../config/router/routes";
-import {
-  useAppDispatch,
-  useAppSelector,
-} from "../../../../../Logic/Slices/hooks";
+import { useAppSelector } from "../../../../../Logic/Slices/hooks";
 import LoadingView from "../../../../../core/components/loadingComponent/loadingView";
 
 export default function BrandsList({ brands }: { brands: Brand[] }) {

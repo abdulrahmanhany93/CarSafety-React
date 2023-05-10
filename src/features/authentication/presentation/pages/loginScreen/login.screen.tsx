@@ -3,7 +3,7 @@ import { useNavigation } from "@react-navigation/native";
 import LoginScreenUpperContainer from "../../components/login.screen.container";
 import AppStrings from "../../../../../core/utils/App.Strings";
 import { Divider, Text } from "react-native-paper";
-import AuthenticationTextFeild from "../../components/authentication.textfeild";
+import AuthenticationTextField from "../../components/authentication.textfield";
 import TextButton from "../../../../../core/components/MyButton/MyButton";
 import ImageButton from "../../../../../core/components/imageButton/imageButton";
 import Assets from "../../../../../core/utils/assets.manager";
@@ -38,14 +38,14 @@ export default function LoginScreen() {
         {AppStrings.PLEASE_LOGIN}
       </Text>
       <View style={authScreenStyles.content}>
-        <AuthenticationTextFeild
+        <AuthenticationTextField
           label={AppStrings.EMAIL}
           hint={AppStrings.EMAIL_HINT}
           onChangeText={(value) => {
             email = value;
           }}
         />
-        <AuthenticationTextFeild
+        <AuthenticationTextField
           label={AppStrings.PASSWORD}
           hint={AppStrings.PASSWORD_HINT}
           onChangeText={(value) => {

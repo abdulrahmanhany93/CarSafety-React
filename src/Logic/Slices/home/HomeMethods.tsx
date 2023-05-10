@@ -1,5 +1,5 @@
 import { inject, injectable } from "inversify";
-import Servicetypes from "../../../core/utils/SlTypes";
+import ServiceTypes from "../../../core/utils/SlTypes";
 import GetBrandsUseCase from "../../../features/home/domain/usecases/GetBrandsUseCase";
 import { NoParams } from "../../../config/UseCases/UseCaseParams";
 import { Either } from "fp-ts/lib/Either";
@@ -11,11 +11,11 @@ import GetRandomCarsUseCase from "../../../features/home/domain/usecases/GetRand
 
 @injectable()
 class HomeMethods {
-  @inject(Servicetypes.GetBrandsUseCase)
+  @inject(ServiceTypes.GetBrandsUseCase)
   private getBrandsUseCase!: GetBrandsUseCase;
-  @inject(Servicetypes.GetMostSearchedCarUseCase)
+  @inject(ServiceTypes.GetMostSearchedCarUseCase)
   private getMostSearchedCarUseCase!: GetMostSearchedCarUseCase;
-  @inject(Servicetypes.GetRandomCarsUseCase)
+  @inject(ServiceTypes.GetRandomCarsUseCase)
   private GetRandomCarsUseCase!: GetRandomCarsUseCase;
   async getBrands(): Promise<Either<Failure, Brand[]>> {
     return await this.getBrandsUseCase.call(new NoParams());

@@ -1,5 +1,5 @@
 import { inject, injectable } from "inversify";
-import Servicetypes from "../../../core/utils/SlTypes";
+import ServiceTypes from "../../../core/utils/SlTypes";
 import GetBrandsUseCase from "../../../features/home/domain/usecases/GetBrandsUseCase";
 import { NoParams } from "../../../config/UseCases/UseCaseParams";
 import { Either } from "fp-ts/lib/Either";
@@ -9,7 +9,7 @@ import GetSectionsUseCase from "../../../features/brand/domain/usecases/GetSecti
 import Section from "../../../features/brand/domain/entities/section";
 @injectable()
 class BrandMethods {
-  @inject(Servicetypes.GetSectionsUseCase)
+  @inject(ServiceTypes.GetSectionsUseCase)
   private getSectionsUseCase!: GetSectionsUseCase;
   async getSections(brandId: string): Promise<Either<Failure, Section[]>> {
     return await this.getSectionsUseCase.call(brandId);

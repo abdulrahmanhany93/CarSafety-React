@@ -17,6 +17,7 @@ import { firebase } from "@react-native-firebase/auth";
 import { isUserLoggedIn } from "./src/core/utils/globalMethods";
 
 const Navigation = createStackNavigator();
+
 export default function App() {
   // Handle user state changes
   const [loaded] = initilizeFonts();

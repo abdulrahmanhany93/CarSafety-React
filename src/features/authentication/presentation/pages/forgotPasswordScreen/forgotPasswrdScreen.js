@@ -4,7 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 import LoginScreenUpperContainer from "../../components/login.screen.container";
 import AppStrings from "../../../../../core/utils/App.Strings";
 import { Text } from "react-native-paper";
-import AuthenticationTextFeild from "../../components/authentication.textfeild";
+import AuthenticationTextField from "../../components/authentication.textfield";
 import TextButton from "../../../../../core/components/MyButton/MyButton";
 import authScreenStyles from "../styles";
 export default function ForgotPasswordScreen() {
@@ -21,7 +21,7 @@ export default function ForgotPasswordScreen() {
         {AppStrings.PLEASE_TYPE_YOUR_EMAIL}
       </Text>
       <View style={authScreenStyles.content}>
-        <AuthenticationTextFeild
+        <AuthenticationTextField
           label={AppStrings.EMAIL}
           hint={AppStrings.EMAIL_HINT}
         />

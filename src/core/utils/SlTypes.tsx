@@ -1,4 +1,4 @@
-const Servicetypes = {
+const ServiceTypes = {
   ///! Web Services //!//
   IAuthWebServices: Symbol.for("IAuthWebServices"),
   IHomeWebServices: Symbol.for("IHomeWebServices"),
@@ -27,4 +27,4 @@ const Servicetypes = {
   GoogleSignin: Symbol.for("GoogleSignin"),
   CloudConsumer: Symbol.for("CloudConsumer"),
 };
-export default Servicetypes;
+export default ServiceTypes;

@@ -3,14 +3,14 @@ import IAuthRepository from "../../data/repositories/IAuthRepository";
 import { FirebaseAuthTypes } from "@react-native-firebase/auth";
 import { Either, left, right } from "fp-ts/lib/Either";
 import IAuthWebServices from "../../data/datasources/IAuthWebServices";
-import Servicetypes from "../../../../core/utils/SlTypes";
+import ServiceTypes from "../../../../core/utils/SlTypes";
 import "reflect-metadata";
 import { Failure, ServerFailure } from "../../../../core/error/failures";
 import { handelError } from "../../../../core/utils/globalMethods";
 
 @injectable()
 export default class AuthRepository implements IAuthRepository {
-  @inject<IAuthWebServices>(Servicetypes.IAuthWebServices)
+  @inject<IAuthWebServices>(ServiceTypes.IAuthWebServices)
   private authWebService!: IAuthWebServices;
   async SignInWithEmail(
     email: string,

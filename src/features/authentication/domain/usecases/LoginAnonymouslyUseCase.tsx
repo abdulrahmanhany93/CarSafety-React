@@ -4,14 +4,14 @@ import IAuthRepository from "../../data/repositories/IAuthRepository";
 import { UseCase } from "../../../../config/UseCases/IUseCase";
 import { Either } from "fp-ts/lib/Either";
 import { NoParams } from "../../../../config/UseCases/UseCaseParams";
-import Servicetypes from "../../../../core/utils/SlTypes";
+import ServiceTypes from "../../../../core/utils/SlTypes";
 import "reflect-metadata";
 import { Failure } from "../../../../core/error/failures";
 @injectable()
 class LogInAnonymouslyUseCase
   implements UseCase<FirebaseAuthTypes.User, NoParams>
 {
-  @inject(Servicetypes.IAuthRepository)
+  @inject(ServiceTypes.IAuthRepository)
   private authRepository!: IAuthRepository;
 
   async call(

@@ -2,7 +2,7 @@ import { Container } from "inversify";
 import AuthWebServices from "./src/features/authentication/data/datasources/AuthWebServices";
 import AuthRepository from "./src/features/authentication/domain/repositories/AuthRepository";
 import LogInWithEmailUseCase from "./src/features/authentication/domain/usecases/LoginWithEmailUseCase";
-import Servicetypes from "./src/core/utils/SlTypes";
+import ServiceTypes from "./src/core/utils/SlTypes";
 import IAuthWebServices from "./src/features/authentication/data/datasources/IAuthWebServices";
 import IAuthRepository from "./src/features/authentication/data/repositories/IAuthRepository";
 import "reflect-metadata";
@@ -29,64 +29,64 @@ import GetRandomCarsUseCase from "./src/features/home/domain/usecases/GetRandomC
 const sl = new Container();
 export function setupServiceLocator() {
   //! Web Services //!
-  sl.bind<IAuthWebServices>(Servicetypes.IAuthWebServices)
+  sl.bind<IAuthWebServices>(ServiceTypes.IAuthWebServices)
     .to(AuthWebServices)
     .inSingletonScope();
-  sl.bind<IHomeWebServices>(Servicetypes.IHomeWebServices)
+  sl.bind<IHomeWebServices>(ServiceTypes.IHomeWebServices)
     .to(HomeWebServices)
     .inSingletonScope();
-  sl.bind<IBrandWebServices>(Servicetypes.IBrandWebServices)
+  sl.bind<IBrandWebServices>(ServiceTypes.IBrandWebServices)
     .to(BrandWebServices)
     .inSingletonScope();
 
   //*-----------------------------------------------------------------------------//*
   //! Repositories //!
-  sl.bind<IAuthRepository>(Servicetypes.IAuthRepository)
+  sl.bind<IAuthRepository>(ServiceTypes.IAuthRepository)
     .to(AuthRepository)
     .inSingletonScope();
-  sl.bind<IHomeRepository>(Servicetypes.IHomeRepository)
+  sl.bind<IHomeRepository>(ServiceTypes.IHomeRepository)
     .to(HomeRepository)
     .inSingletonScope();
-  sl.bind<IBrandRepository>(Servicetypes.IBrandRepository)
+  sl.bind<IBrandRepository>(ServiceTypes.IBrandRepository)
     .to(BrandRepository)
     .inSingletonScope();
 
   //*-----------------------------------------------------------------------------//*
   //! Use Cases //!
-  sl.bind<LogInWithEmailUseCase>(Servicetypes.LoginWithEmailUseCase)
+  sl.bind<LogInWithEmailUseCase>(ServiceTypes.LoginWithEmailUseCase)
     .to(LogInWithEmailUseCase)
     .inSingletonScope();
-  sl.bind<LogInWithGoogleUseCase>(Servicetypes.LogInWithGoogleUseCase)
+  sl.bind<LogInWithGoogleUseCase>(ServiceTypes.LogInWithGoogleUseCase)
     .to(LogInWithGoogleUseCase)
     .inSingletonScope();
-  sl.bind<SignInWithAppleUseCase>(Servicetypes.LoginWithAppleUseCase)
+  sl.bind<SignInWithAppleUseCase>(ServiceTypes.LoginWithAppleUseCase)
     .to(SignInWithAppleUseCase)
     .inSingletonScope();
-  sl.bind<LogInAnonymouslyUseCase>(Servicetypes.LoginAnonymouslyUseCase)
+  sl.bind<LogInAnonymouslyUseCase>(ServiceTypes.LoginAnonymouslyUseCase)
     .to(LogInAnonymouslyUseCase)
     .inSingletonScope();
-  sl.bind<GetBrandsUseCase>(Servicetypes.GetBrandsUseCase)
+  sl.bind<GetBrandsUseCase>(ServiceTypes.GetBrandsUseCase)
     .to(GetBrandsUseCase)
     .inSingletonScope();
-  sl.bind<GetMostSearchedCarUseCase>(Servicetypes.GetMostSearchedCarUseCase)
+  sl.bind<GetMostSearchedCarUseCase>(ServiceTypes.GetMostSearchedCarUseCase)
     .to(GetMostSearchedCarUseCase)
     .inSingletonScope();
-  sl.bind<GetSectionsUseCase>(Servicetypes.GetSectionsUseCase)
+  sl.bind<GetSectionsUseCase>(ServiceTypes.GetSectionsUseCase)
     .to(GetSectionsUseCase)
     .inSingletonScope();
-  sl.bind<GetRandomCarsUseCase>(Servicetypes.GetRandomCarsUseCase)
+  sl.bind<GetRandomCarsUseCase>(ServiceTypes.GetRandomCarsUseCase)
     .to(GetRandomCarsUseCase)
     .inSingletonScope();
 
   //*-----------------------------------------------------------------------------//*
   //! Mehods //!
-  sl.bind<AuthMethods>(Servicetypes.AuthMethods)
+  sl.bind<AuthMethods>(ServiceTypes.AuthMethods)
     .to(AuthMethods)
     .inSingletonScope();
-  sl.bind<HomeMethods>(Servicetypes.HomeMethods)
+  sl.bind<HomeMethods>(ServiceTypes.HomeMethods)
     .to(HomeMethods)
     .inSingletonScope();
-  sl.bind<BrandMethods>(Servicetypes.BrandMethods)
+  sl.bind<BrandMethods>(ServiceTypes.BrandMethods)
     .to(BrandMethods)
     .inSingletonScope();
 
@@ -94,7 +94,7 @@ export function setupServiceLocator() {
 
   //! Utils //!
 
-  sl.bind<CloudConsumer>(Servicetypes.CloudConsumer)
+  sl.bind<CloudConsumer>(ServiceTypes.CloudConsumer)
     .to(CloudConsumer)
     .inSingletonScope();
 

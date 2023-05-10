@@ -7,14 +7,14 @@ import {
   LoginWithEmailParams,
   NoParams,
 } from "../../../../config/UseCases/UseCaseParams";
-import Servicetypes from "../../../../core/utils/SlTypes";
+import ServiceTypes from "../../../../core/utils/SlTypes";
 import "reflect-metadata";
 import { Failure } from "../../../../core/error/failures";
 @injectable()
 class LogInWithGoogleUseCase
   implements UseCase<FirebaseAuthTypes.User, NoParams>
 {
-  @inject(Servicetypes.IAuthRepository)
+  @inject(ServiceTypes.IAuthRepository)
   private authRepository!: IAuthRepository;
 
   async call(

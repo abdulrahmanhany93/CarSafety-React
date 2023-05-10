@@ -6,17 +6,17 @@ import TextFieldComponent from "../../../../core/components/TextField/text.field
 import AppStrings from "../../../../core/utils/App.Strings";
 import AppFont from "../../../../core/utils/fonts/AppFonts";
 import { getAlignment } from "../../../../core/utils/constants";
-interface AuthenticationTextFeildProps {
+interface AuthenticationTextFieldProps {
   label: string;
   hint: string;
   onChangeText: (text: string) => void;
 }
 
-export default function AuthenticationTextFeild({
+export default function AuthenticationTextField({
   label,
   hint,
   onChangeText,
-}: AuthenticationTextFeildProps) {
+}: AuthenticationTextFieldProps) {
   return (
     <>
       <Text variant="titleSmall" style={styles.title}>

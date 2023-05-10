@@ -1,5 +1,5 @@
 import { inject, injectable } from "inversify";
-import Servicetypes from "../../../core/utils/SlTypes";
+import ServiceTypes from "../../../core/utils/SlTypes";
 import LogInWithEmailUseCase from "../../../features/authentication/domain/usecases/LoginWithEmailUseCase";
 import {
   LoginActionParams,
@@ -14,13 +14,13 @@ import { Either } from "fp-ts/lib/Either";
 import LogInAnonymouslyUseCase from "../../../features/authentication/domain/usecases/LoginAnonymouslyUseCase";
 @injectable()
 class AuthMethods {
-  @inject(Servicetypes.LoginWithEmailUseCase)
+  @inject(ServiceTypes.LoginWithEmailUseCase)
   loginWithEmailUseCase!: LogInWithEmailUseCase;
-  @inject(Servicetypes.LogInWithGoogleUseCase)
+  @inject(ServiceTypes.LogInWithGoogleUseCase)
   loginWithGoogleUseCase!: LogInWithGoogleUseCase;
-  @inject(Servicetypes.LoginWithAppleUseCase)
+  @inject(ServiceTypes.LoginWithAppleUseCase)
   loginWithAppleUseCase!: SignInWithAppleUseCase;
-  @inject(Servicetypes.LoginAnonymouslyUseCase)
+  @inject(ServiceTypes.LoginAnonymouslyUseCase)
   loginAnonymouslyUseCase!: LogInAnonymouslyUseCase;
 
   private loginWithEmail = (

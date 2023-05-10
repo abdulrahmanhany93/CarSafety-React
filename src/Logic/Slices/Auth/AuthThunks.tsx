@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import Servicetypes from "../../../core/utils/SlTypes";
+import ServiceTypes from "../../../core/utils/SlTypes";
 
 import { isLeft } from "fp-ts/lib/Either";
 import sl from "../../../../Injection_Container";
@@ -7,7 +7,7 @@ import sl from "../../../../Injection_Container";
 import { LoginActionParams } from "../../../config/UseCases/UseCaseParams";
 import AuthMethods from "./AuthActionsMethod";
 function getAuthMethods(): AuthMethods {
-  return sl.get<AuthMethods>(Servicetypes.AuthMethods);
+  return sl.get<AuthMethods>(ServiceTypes.AuthMethods);
 }
 const login = createAsyncThunk(
   "auth/login",

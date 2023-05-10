@@ -4,13 +4,13 @@ import IHomeRepository from "../../data/repositories/IHomeRepository";
 import Brand from "../entities/brand";
 import { Car } from "../entities/car";
 import { inject, injectable } from "inversify";
-import Servicetypes from "../../../../core/utils/SlTypes";
+import ServiceTypes from "../../../../core/utils/SlTypes";
 import IHomeWebServices from "../../data/datasources/IHomeWebServices";
 import { right } from "fp-ts/lib/Either";
 import { handelError } from "../../../../core/utils/globalMethods";
 @injectable()
 class HomeRepository implements IHomeRepository {
-  @inject(Servicetypes.IHomeWebServices)
+  @inject(ServiceTypes.IHomeWebServices)
   private homeWebServices!: IHomeWebServices;
   async getBrands(): Promise<Either<Failure, Brand[]>> {
     try {

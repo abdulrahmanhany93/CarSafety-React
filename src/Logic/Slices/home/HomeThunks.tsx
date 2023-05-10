@@ -1,10 +1,10 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import Servicetypes from "../../../core/utils/SlTypes";
+import ServiceTypes from "../../../core/utils/SlTypes";
 import HomeMethods from "./HomeMethods";
 import { isLeft } from "fp-ts/lib/Either";
 import sl from "../../../../Injection_Container";
 function getHomeMethods(): HomeMethods {
-  return sl.get<HomeMethods>(Servicetypes.HomeMethods);
+  return sl.get<HomeMethods>(ServiceTypes.HomeMethods);
 }
 const getBrands = createAsyncThunk(
   "home/getBrands",
