@@ -1,7 +1,7 @@
-# CareSafety App 🚗🛡️
+# CarSafety App 🚗🛡️
 
 ## Overview
-The **CareSafety App** is designed to allow users to view and compare the safety features of different cars. The app utilizes a clean architecture to ensure maintainability and scalability, while leveraging Firebase for authentication and data management.
+The **CarSafety App** is designed to allow users to view and compare the safety features of different cars. The app utilizes a clean architecture to ensure maintainability and scalability, while leveraging Firebase for authentication and data management.
 
 ## Features
 - 🟢 **User-Friendly Interface**: Easy navigation and interaction for users.
